@@ -95,9 +95,9 @@ define('DB_NAME', 'simak_unasman');
 
 | Role | NIM/ID | Password |
 |------|--------|----------|
-| Admin | ADMIN001 | admin123 |
-| Mahasiswa | 2021010001 | mhs123 |
-| Mahasiswa | 2021020001 | mhs123 |
+| Admin | admin | admin |
+| Mahasiswa | 2021010001 | 123456 |
+| Mahasiswa | 2021020001 | 123456 |
 
 ---
 
