@@ -76,7 +76,7 @@ CREATE TABLE `payments` (
 
 -- Admin default (password: admin123)
 INSERT INTO `users` (`nim`, `password`, `role`) VALUES
-('ADMIN001', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin');
+('admin', 'admin', 'admin');
 
 -- Fakultas
 INSERT INTO `faculties` (`name`, `code`) VALUES
@@ -88,8 +88,8 @@ INSERT INTO `faculties` (`name`, `code`) VALUES
 
 -- Mahasiswa demo (password: mhs123)
 INSERT INTO `users` (`nim`, `password`, `role`) VALUES
-('2021010001', '$2y$10$TKh8H1.PmbraeX7yXRSiW.9fVJJJIJWPkWpxbhMXiPl1lHWgpMByi', 'mahasiswa'),
-('2021020001', '$2y$10$TKh8H1.PmbraeX7yXRSiW.9fVJJJIJWPkWpxbhMXiPl1lHWgpMByi', 'mahasiswa');
+('2021010001', '123456', 'mahasiswa'),
+('2021020001', '123456', 'mahasiswa');
 
 INSERT INTO `students` (`user_id`, `nim`, `name`, `faculty_id`, `semester`, `angkatan`, `phone`, `email`) VALUES
 (2, '2021010001', 'Ahmad Fauzi', 1, 7, 2021, '081234567890', 'ahmad@email.com'),

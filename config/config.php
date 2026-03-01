@@ -13,6 +13,12 @@ define('MIDTRANS_IS_PRODUCTION', false);
 define('MIDTRANS_SNAP_URL', 'https://app.sandbox.midtrans.com/snap/snap.js');
 
 require_once __DIR__ . '/database.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+
+\Midtrans\Config::$serverKey = MIDTRANS_SERVER_KEY;
+\Midtrans\Config::$isProduction = MIDTRANS_IS_PRODUCTION;
+\Midtrans\Config::$isSanitized = true;
+\Midtrans\Config::$is3ds = true;
 
 // Helper functions
 function redirect($url) {

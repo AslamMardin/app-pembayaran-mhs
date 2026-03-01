@@ -63,9 +63,29 @@ $pageTitle = 'Login';
       box-shadow: 0 25px 60px rgba(0,0,0,0.3);
     }
     .login-left {
-      background: linear-gradient(180deg, #1a3a6b, #0f2447);
-      padding: 50px 40px; color: #fff;
-    }
+  position: relative;
+  padding: 50px 40px;
+  color: #fff;
+  background: url('assets/img/unnamed-14.jpg') center/cover no-repeat;
+  overflow: hidden;
+  background-position: -4rem 0px;
+}
+
+/* Overlay gelap */
+.login-left::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 25, 50, 0.65); /* tingkat kegelapan */
+  backdrop-filter: blur(2px); /* efek blur */
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* Supaya isi tetap di atas overlay */
+.login-left > * {
+  position: relative;
+  z-index: 2;
+}
     .login-right { background: #fff; padding: 50px 40px; }
     .logo-circle {
       width: 80px; height: 80px; background: #c8a951;
@@ -147,9 +167,7 @@ $pageTitle = 'Login';
           </form>
 
           <div class="mt-4 p-3 bg-light rounded-3">
-            <p class="small text-muted mb-1 fw-bold">Demo Login:</p>
-            <p class="small text-muted mb-0">Admin: <code>ADMIN001</code> / <code>admin123</code></p>
-            <p class="small text-muted mb-0">Mhs: <code>2021010001</code> / <code>mhs123</code></p>
+            <p class="small text-muted mb-1 fw-bold">Aplikasi Oleh Masita tahun 2026</p>
           </div>
         </div>
       </div>

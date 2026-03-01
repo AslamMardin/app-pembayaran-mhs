@@ -58,12 +58,21 @@ simak/
 mysql -u root -p < database.sql
 ```
 
+
+### install midtrans
+<!-- composer require midtrans/midtrans-php -->
+
 ### 3. Konfigurasi
 Edit file `config/config.php`:
 ```php
 define('APP_URL', 'http://localhost/simak');  // Sesuaikan URL
 define('MIDTRANS_SERVER_KEY', 'SB-Mid-server-XXXX');  // Dari dashboard Midtrans
 define('MIDTRANS_CLIENT_KEY', 'SB-Mid-client-XXXX');  // Dari dashboard Midtrans
+
+// define('MIDTRANS_SERVER_KEY', 'SB-Mid-server-SrGY5IayYanPygo-n5sWiGOR');
+// define('MIDTRANS_CLIENT_KEY', 'SB-Mid-client-d22UfIZaEYgBQzK8');
+// define('MIDTRANS_IS_PRODUCTION', false);
+// define('MIDTRANS_SNAP_URL', 'https://app.sandbox.midtrans.com/snap/snap.js');
 ```
 
 Edit file `config/database.php`:
