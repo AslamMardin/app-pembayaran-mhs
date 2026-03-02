@@ -71,13 +71,13 @@ include '../includes/admin_sidebar.php';
 
     <!-- Summary Cards -->
     <div class="row g-3 mb-4">
-      <div class="col-md-3">
+      <!-- <div class="col-md-3">
         <div class="stat-card" style="background:linear-gradient(135deg,#059669,#10b981);">
           <i class="bi bi-cash-stack stat-icon"></i>
           <h3 style="font-size:18px;"><?= formatRupiah($summary['total_success']) ?></h3>
           <p>Total Pendapatan</p>
         </div>
-      </div>
+      </div> -->
       <div class="col-md-3">
         <div class="stat-card" style="background:linear-gradient(135deg,#1a3a6b,#2563eb);">
           <i class="bi bi-receipt stat-icon"></i>

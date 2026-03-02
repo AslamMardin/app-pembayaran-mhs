@@ -37,7 +37,7 @@ include '../includes/admin_sidebar.php';
                 <small class="text-muted"><?= $p['nim'] ?> · <?= $p['faculty_name'] ?></small>
               </td>
               <td><?= htmlspecialchars($p['description']) ?></td>
-              <td class="fw-bold"><?= formatRupiah($p['amount_paid'] ?? $p['amount']) ?></td>
+              <td class="fw-bold"><?= formatRupiah($p['amount']) ?></td>
               <td><?= $p['payment_method'] ? ucfirst($p['payment_method']) : '-' ?></td>
               <td><?= $p['payment_date'] ? date('d/m/Y H:i', strtotime($p['payment_date'])) : '-' ?></td>
               <td><?= getStatusBadge($p['payment_status']) ?></td>

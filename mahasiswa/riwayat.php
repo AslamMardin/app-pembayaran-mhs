@@ -5,7 +5,7 @@ $db = getDB();
 $sid = $_SESSION['student_id'];
 
 $payments = $db->prepare("
-    SELECT p.*, b.bill_code, b.description, b.amount, b.semester, b.academic_year
+    SELECT p.*, b.bill_code, b.description, b.semester, b.academic_year
     FROM payments p
     JOIN bills b ON p.bill_id = b.id
     WHERE b.student_id = ?
@@ -35,7 +35,7 @@ include '../includes/mhs_sidebar.php';
         <?php else: ?>
         <table class="table datatable table-hover">
           <thead>
-            <tr><th>Order ID</th><th>Tagihan</th><th>Jumlah</th><th>Metode</th><th>Tgl Bayar</th><th>Status</th></tr>
+            <tr><th>Order ID</th><th>Tagihan</th><th>Metode</th><th>Tgl Bayar</th><th>Status</th></tr>
           </thead>
           <tbody>
             <?php while ($p = $payments->fetch_assoc()): ?>
@@ -45,7 +45,6 @@ include '../includes/mhs_sidebar.php';
                 <?= htmlspecialchars($p['description']) ?><br>
                 <small class="text-muted">Semester <?= $p['semester'] ?> · <?= $p['academic_year'] ?></small>
               </td>
-              <td class="fw-bold"><?= formatRupiah($p['amount_paid'] ?? $p['amount']) ?></td>
               <td><?= $p['payment_method'] ? ucfirst($p['payment_method']) : '-' ?></td>
               <td><?= $p['payment_date'] ? date('d/m/Y H:i', strtotime($p['payment_date'])) : '-' ?></td>
               <td><?= getStatusBadge($p['payment_status']) ?></td>
